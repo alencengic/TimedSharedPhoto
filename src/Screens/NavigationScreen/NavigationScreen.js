@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { View, Text } from 'react-native';
 
-export default function NavigationScreen() {
+function NavigationScreen() {
   const [buttonText, setButtonText] = useState("Click me, please");
 
   return (
-    <button onClick={() => setButtonText("Thanks, been clicked!")}>
-      {buttonText}
-    </button>
+    <View>
+      <Text>Test</Text>
+    </View>
   );
 }
+
+export default NavigationScreen;
