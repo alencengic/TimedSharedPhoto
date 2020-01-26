@@ -9,11 +9,12 @@ function LoginScreen() {
         <View style={styles.container}>
             <View style={styles.input}>
                 <Input
-                    placeholder='INPUT WITH CUSTOM ICON'
+                    labelStyle={styles.inputLabel}
+                    placeholder='Username'
                     leftIcon={
                         <Icon
                             name='user'
-                            size={24}
+                            size={22}
                             color='black'
                         />
                     }
@@ -21,11 +22,11 @@ function LoginScreen() {
             </View>
             <View style={styles.input}>
                 <Input
-                    placeholder='INPUT WITH CUSTOM ICON2'
+                    placeholder='Password'
                     leftIcon={
                         <Icon
-                            name='user'
-                            size={24}
+                            name='password'
+                            size={22}
                             color='black'
                         />
                     }

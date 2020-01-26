@@ -10,6 +10,8 @@ export default StyleSheet.create({
         flex: 1,
         width: 200,
         flexDirection: 'column',
-
+    },
+    inputLabel: {
+        fontSize: 2
     }
 })
