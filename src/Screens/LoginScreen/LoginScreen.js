@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './LoginStyle'
 
-function LoginScreen() {
+function LoginScreen(props) {
+    const [profileState, setProfileState] = useState(props);
+    const { navigate } = profileState.navigation;
+
     return (
         <View style={styles.container}>
             <View>
@@ -43,6 +46,7 @@ function LoginScreen() {
                     title="Login"
                     type="outline"
                     containerStyle={styles.button}
+                    onPress={() => navigate('UploadScreen')}
                 />
                 <Button
                     title="Register"

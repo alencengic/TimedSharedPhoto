@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavigationNativeContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './src/Screens/HomeScreen/HomeScreen'
-import LoginScreen from './src/Screens/LoginScreen/LoginScreen'
+import LoginScreen from './src/Screens/LoginScreen/LoginScreen';
+import UploadScreen from './src/Screens/UploadScreen/UploadScreen';
 
 const Stack = createStackNavigator({});
 
@@ -16,8 +16,8 @@ function App() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Home"
-          component={HomeScreen}
+          name="UploadScreen"
+          component={UploadScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
