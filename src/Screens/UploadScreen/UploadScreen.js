@@ -4,11 +4,11 @@ import { Overlay, Button } from 'react-native-elements';
 import { ActivityIndicator } from 'react-native';
 import { Image } from 'react-native-elements';
 import { photoImage } from '../../Assets/imageList'
+import { openImagePicker } from '../../Components/ImagePicker/ImagePicker'
 import styles from './UploadScreenStyle'
 
 function UploadScreen() {
     const [isVisible, setIsVisible] = useState(false);
-    console.log(isVisible)
     return (
         <View style={styles.container}>
             <Overlay
@@ -28,6 +28,7 @@ function UploadScreen() {
                     title="Upload"
                     type="outline"
                     containerStyle={styles.button}
+                    onPress={() => { openImagePicker("picker") }}
                 />
                 <Button
                     title="Share"
