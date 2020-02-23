@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
-import { Overlay, Button } from 'react-native-elements';
+import { View } from 'react-native';
+import { Button } from 'react-native-elements';
 import { ActivityIndicator } from 'react-native';
 import { Image } from 'react-native-elements';
 import { photoImage } from '../../Assets/imageList'
 import { openImagePicker } from '../../Components/ImagePicker/ImagePicker'
+import UploadScreenOverlay from './UploadScreenOverlay'
 import styles from './UploadScreenStyle'
 
 function UploadScreen() {
     const [isVisible, setIsVisible] = useState(false);
+
     return (
         <View style={styles.container}>
-            <Overlay
+            <UploadScreenOverlay
                 isVisible={isVisible}
-                onBackdropPress={() => { setIsVisible(false) }}>
-                <Text>Hello from Overlay!</Text>
-            </Overlay>
+                parentCallback={newValue => { setIsVisible(newValue) }}
+            />
             <View>
                 <Image
                     source={photoImage}
